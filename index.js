@@ -69,7 +69,7 @@ function install (Vue, options) {
       var readyEvent = el.getAttribute('wait-for')
 
       if (readyEvent && !$validator._isRegistedReadyEvent(keypath)) {
-        $validator._addReadyEvents(keypath, this._checkParam('wait-for'))
+        $validator._addReadyEvents(keypath, this.param('wait-for'))
       }
       
       this._setupValidator($validator, keypath, validation, validator, el, arg, init)

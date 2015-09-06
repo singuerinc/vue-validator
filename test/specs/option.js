@@ -10,6 +10,10 @@ var createInstance = require('./helper').createInstance
 describe('option', function () {
   var vm, targetVM
 
+  afterEach(function () {
+    plugin.installed = false
+  })
+
 
   describe('component', function () {
     describe('no specify', function () {
