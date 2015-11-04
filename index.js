@@ -99,10 +99,9 @@ function install (Vue, options) {
       }
 
       if (!$validator) {
-        vm[componentName] = $validator = vm.$addChild(
-          {}, // null option
-          Vue.extend(require('./lib/validator'))
-        )
+        var val = require('./lib/validator');
+        val.parent = vm;
+        vm[componentName] = $validator = new Vue(val)
       }
 
       var value = el.getAttribute('value')
