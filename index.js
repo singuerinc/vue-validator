@@ -85,7 +85,7 @@ function install (Vue, options) {
       var vm = this.vm
       var el = this.el
       var $validator = vm[componentName]
-      var keypath = this._keypath = this._parseModelAttribute(el.getAttribute(Vue.config.prefix + 'model'))
+      var keypath = this._keypath = this._parseModelAttribute(el.getAttribute('v-model'))
       var validator = this.arg ? this.arg : this.expression
       var arg = this.arg ? this.expression : null
 
