@@ -157,7 +157,7 @@ function install (Vue, options) {
 
     _parseModelAttribute: function (attr) {
       var res = Vue.parsers.directive.parse(attr)
-      return res[0].arg ? res[0].arg : res[0].expression
+      return res.expression;
     },
 
     _checkValidator: function (validator, validates, customs) {
